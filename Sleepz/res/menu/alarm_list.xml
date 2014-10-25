@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.sleepz.AlarmListActivity" >
+
+    <item
+        android:id="@+id/action_add_new_alarm"
+        android:icon="@drawable/action_bar_add"
+        android:showAsAction="always" />
+    
+    <item
+        android:id="@+id/action_sleep_alarm_button"
+        android:icon="@drawable/action_sleep_alarm"
+        android:showAsAction="always" />
+    
+    <item 
+        android:id="@+id/action_awake_alarm_button"
+        android:icon="@drawable/action_awake_alarm"
+        android:showAsAction="always" />
+
+</menu>

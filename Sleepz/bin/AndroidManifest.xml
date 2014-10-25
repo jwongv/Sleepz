@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sleepz"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.sleepz.AlarmListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+    		android:configChanges="keyboardHidden|orientation|screenSize" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.sleepz.AlarmDetailsActivity"
+            android:label="@string/title_activity_alarm_details"
+            android:screenOrientation="portrait"
+    		android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+
+        <receiver android:name="com.example.sleepz.AlarmManagerHelper" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.example.sleepz.AlarmService"
+            android:enabled="true" />
+
+        <activity
+            android:name="com.example.sleepz.AlarmScreenActivity"
+            android:label="@string/title_activity_alarm_screen"
+            android:screenOrientation="portrait"
+    		android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.sleepz.SleepAlarmActivity"
+            android:label="@string/title_activity_sleep_alarm"
+            android:screenOrientation="portrait"
+    		android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.sleepz.TimeSelectActivity"
+            android:label="@string/title_activity_time_select"
+            android:screenOrientation="portrait"
+    		android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.sleepz.AwakeAlarmActivity"
+            android:label="@string/title_activity_awake_alarm"
+            android:screenOrientation="portrait"
+    		android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.sleepz.TimeSelectAwakeActivity"
+            android:label="@string/title_activity_time_select_awake"
+            android:screenOrientation="portrait"
+    		android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+    </application>
+
+</manifest>
